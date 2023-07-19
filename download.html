@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Download ReelMatch</title>
+  </head>
+  <body>
+    <script>
+      const android_link =
+        "https://play.google.com/store/apps/details?id=com.king.candycrushsaga";
+      const ios_link =
+        "https://apps.apple.com/us/app/candy-crush-saga/id553834731";
+
+      const default_link = android_link;
+
+      // Function to check the platform and redirect accordingly
+      function redirectToSpecificLink() {
+        const userAgent = navigator.userAgent.toLowerCase();
+
+        //For Android
+        if (/android/.test(userAgent)) {
+          window.location.href = android_link;
+        }
+        //For IOS
+        else if (/iphone|ipad|ipod/.test(userAgent)) {
+          window.location.href = ios_link;
+        }
+        //If none then default
+        else {
+          window.location.href = default_link;
+        }
+      }
+
+      window.onload = redirectToSpecificLink;
+    </script>
+  </body>
+</html>
