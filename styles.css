@@ -24,6 +24,18 @@ footer {
   color: white;
 }
 
+/* Apply white color to the link text */
+.custom-link {
+  color: white;
+}
+
+/* Add a thin yellow underline to the link text */
+.custom-link:hover {
+  text-decoration: underline;
+  text-decoration-color: yellow;
+  text-decoration-thickness: 1px; /* Adjust the thickness as needed */
+}
+
 #page {
   position: relative;
   height: 100%;
