@@ -36,6 +36,12 @@ footer {
   text-decoration-thickness: 1px; /* Adjust the thickness as needed */
 }
 
+.footercontainer {
+  display: inline-block;
+  background-color: yellow;
+  padding: 5px; /* Adjust the padding as needed for spacing */
+}
+
 #page {
   position: relative;
   height: 100%;
