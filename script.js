@@ -9,14 +9,14 @@ function onYouTubeIframeAPIReady() {
   player = new YT.Player("player", {
     height: "100%",
     width: "100%",
-    videoId: "9FXCSXuGTF4",
+    videoId: "P6AaSMfXHbA",
     playerVars: {
       autoplay: 1,
       controls: 0,
       showinfo: 0,
       modestbranding: 1,
       loop: 1,
-      playlist: "t9QQ113xnGo",
+      playlist: "P6AaSMfXHbA",
       fs: 0,
       cc_load_policy: 0, // Fix typo here
       iv_load_policy: 3,
