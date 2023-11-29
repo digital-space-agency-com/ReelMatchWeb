@@ -28,24 +28,19 @@
         iosPlatforms = /(iphone|ipad|ipod)/i,
         androidPlatforms = /(android)/i,
 
-        // iOS Devices
-        if (iosPlatforms.test(userAgent)) {
+        if (iosPlatforms.test(userAgent)) {  // iOS Devices
           window.location.href = ios_link;
-        // Android Devices
-        } else if (androidPlatforms.test(userAgent)) {
+        } else if (androidPlatforms.test(userAgent)) {  // Android Devices
           window.location.href = android_link;
-        // Mac Devices for testing
-        } else if (macosPlatforms.test(userAgent)) {
+        } else if (macosPlatforms.test(userAgent)) {    // Mac Devices for testing
           window.location.href = ios_link;
-        // Windows Devices not supported but for completeness
-        } else if (windowsPlatforms.test(userAgent)) {
+        } else if (windowsPlatforms.test(userAgent)) {  // Windows Devices not supported but for completeness
           window.location.href = default_link
         } else {
           window.location.href = default_link;
         }
-      }
 
-      window.onload = redirectToSpecificLink;
+        window.onload = redirectToSpecificLink;
     </script>
   </body>
 </html>
