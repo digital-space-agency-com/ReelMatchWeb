@@ -26,7 +26,7 @@
         macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
         windowsPlatforms = /(win32|win64|windows|wince)/i,
         iosPlatforms = /(iphone|ipad|ipod)/i,
-        androidPlatforms = /(android)/i,
+        androidPlatforms = /android/i,
 
         if (iosPlatforms.test(userAgent)) {  // iOS Devices
           window.location.href = ios_link;
