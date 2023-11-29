@@ -22,11 +22,11 @@
 
       // Function to check the platform and redirect accordingly
       function redirectToSpecificLink() {
-        let userAgent = window.navigator.userAgent.toLowerCase(),
-        macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i,
-        windowsPlatforms = /(win32|win64|windows|wince)/i,
-        iosPlatforms = /(iphone|ipad|ipod)/i,
-        androidPlatforms = /android/i,
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        const macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i;
+        const windowsPlatforms = /(win32|win64|windows|wince)/i;
+        const iosPlatforms = /(iphone|ipad|ipod)/i;
+        const androidPlatforms = /android/i;
 
         if (iosPlatforms.test(userAgent)) {  // iOS Devices
           window.location.href = ios_link;
