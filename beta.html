@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Download ReelMatch</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
+    <meta property="og:title" content="Download ReelMatch Now!">
+    <meta property="og:description" content="Find your next binge-watch or movie night before you sit down.">
+    <meta property="og:type" content="app">
+    <meta property="og:url" content="https://reelmatch.app/download">
+    <meta property="og:image" content="https://reelmatch.app/images/share_image.png"/>
+  </head>
+  <body>
+    <script>
+      const android_link =
+        "https://play.google.com/apps/testing/team.dsa.reelmatch";
+      const ios_link =
+        "https://testflight.apple.com/join/eCtTJJum";
+
+      const default_link = android_link;
+
+      // Function to check the platform and redirect accordingly
+      function redirectToSpecificLink() {
+        const userAgent = window.navigator.userAgent.toLowerCase();
+        const macosPlatforms = /(macintosh|macintel|macppc|mac68k|macos)/i;
+        const windowsPlatforms = /(win32|win64|windows|wince)/i;
+        const iosPlatforms = /(iphone|ipad|ipod)/i;
+        const androidPlatforms = /android/i;
+
+        if (iosPlatforms.test(userAgent)) {  // iOS Devices
+          window.location.href = ios_link;
+        } else if (androidPlatforms.test(userAgent)) {  // Android Devices
+          window.location.href = android_link;
+        } else if (macosPlatforms.test(userAgent)) {    // Mac Devices for testing
+          window.location.href = ios_link;
+        } else if (windowsPlatforms.test(userAgent)) {  // Windows Devices not supported but for completeness
+          window.location.href = default_link
+        } else {
+          window.location.href = default_link;
+        }
+      }
+      window.onload = redirectToSpecificLink;
+    </script>
+  </body>
+</html>
